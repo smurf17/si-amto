@@ -13,5 +13,5 @@ public interface LicenseRepository extends JpaRepository<License, Long> {
     List<License> findByActive(boolean active);
     Optional<License> findByNameAndGroupMajor(String name, String GroupMajor);
 
-    boolean existByName();
+    boolean existsByName(String name);
 }

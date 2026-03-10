@@ -12,5 +12,5 @@ public interface MajorLicenseRepository extends JpaRepository<MajorLicense, Long
     List<MajorLicense> findByActive(boolean active);
     Optional<MajorLicense> findByMajorIdAndLicenseId(Long majorId, Long licenseId);
 
-    boolean existByName();
+    boolean existsByName(String name);
 }
