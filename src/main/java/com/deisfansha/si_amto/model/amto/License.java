@@ -17,5 +17,6 @@ public class License {
     private String licenseCode;
     private String groupMajor;
     private Boolean active;
+    private String name;
 
 }

@@ -26,6 +26,7 @@ public class MajorLicense {
     private License license;
 
     private Boolean active;
+    private String name;
 
 
 }

@@ -38,7 +38,7 @@ public class LicenseController {
         return ResponseEntity.ok(response);
     }
 
-    @PutMapping("{/id}")
+    @PutMapping("/{id}")
     public ResponseEntity updateLicense(@PathVariable Long id, @RequestBody License request){
         ApiResponse response = ls.updatedLicenseById(id, request);
 
@@ -48,8 +48,8 @@ public class LicenseController {
         return ResponseEntity.ok(response);
     }
 
-    @DeleteMapping("{/id}")
-    public ResponseEntity updateLicense(@PathVariable Long id){
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteLicense(@PathVariable Long id){
         ApiResponse response = ls.softDeleteLicenseById(id);
 
         if (!response.isSuccess()){
